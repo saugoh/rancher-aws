@@ -60,4 +60,18 @@ So in this example we replace hello-world from tutum/hello-world to nginx.
 
 In Rancher UI, under "APPLICATIONS" you can see that hello-world has been upgraded. If you click on the link you will see a ngnix page response.
 
-in Rancher UI, under "INFRASTRUCTURE" you can see old hello_world container stopped and new hello_world container running.
+In Rancher UI, under "INFRASTRUCTURE" you can see old hello_world container stopped and new hello_world container running.
+
+## Multi Version Deploy
+
+In this deploy we add a new application to the stack called hello-world-v2. Also we add that to the load balancer as well.
+
+```
+cd multi-version-deploy
+rancher-compose --debug -p hello up
+```
+
+In Rancher UI, hello-world-v2 will be deployed into the stack and the hello-lb will be linked to both hello-world and hello-world-v2.
+
+If you access the hello-lb page (the one on port 80), you will alternate between nginx page and hello world page.
+

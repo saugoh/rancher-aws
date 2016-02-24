@@ -6,14 +6,6 @@ hello-world:
     - link-world
   net: managed
 
-#hello-world-v2:
-#  image: tutum/hello-world
-#  ports:
-#    - 8080:80
-#  links:
-#    - sau-world
-#  net: managed
-
 hello-lb:
   image: rancher/load-balancer-service
   ports:

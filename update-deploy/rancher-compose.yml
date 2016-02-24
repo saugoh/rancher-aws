@@ -1,7 +1,5 @@
 hello-world:
   scale: 2
-#hello-world-v2:
-#  scale: 2
 hello-lb:
   scale: 1
   load_balancing_config:
