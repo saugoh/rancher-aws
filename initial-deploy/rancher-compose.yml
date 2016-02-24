@@ -1,0 +1,10 @@
+hello-world:
+  scale: 2
+#hello-world-v2:
+#  scale: 2
+hello-lb:
+  scale: 1
+  load_balancing_config:
+    name: hello-lb
+link-world:
+  scale: 1
